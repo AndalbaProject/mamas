@@ -187,8 +187,10 @@ lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLigh
    DIGITAL BOUQUET
    ============================================================ */
 const flowerMsg = $("flowerMsg");
+const vaseStage = $("vaseStage");
 document.querySelectorAll(".flower").forEach((f) => {
   f.addEventListener("click", () => {
+    vaseStage.classList.add("gathered");
     flowerMsg.style.opacity = "0";
     setTimeout(() => {
       flowerMsg.textContent = f.dataset.msg;
